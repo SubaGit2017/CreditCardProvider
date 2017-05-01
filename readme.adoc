@@ -1,11 +1,14 @@
 = Creditcard Processing System
+
 _Prerequisite to run this project is Java and Maven_
+
 == How to Run
 === Instructions to run in command prompt:
 
 Go to project folder in command prompt and type the following commands +
 mvn clean compile +
 mvn install +
+
 *The program can be executed by one of the below options* +
 * Place the input file in base folder (/creditcard/input.txt) and type below to execute
   *mvn exec:java -Dexec.mainClass="com.braintree.creditcard.service.CardProviderService" -Dexec.args="input.txt"*
