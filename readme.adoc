@@ -6,17 +6,17 @@ _Prerequisite to run this project is Java and Maven_
 === Instructions to run in command prompt:
 
 Go to project folder in command prompt and type the following commands +
-mvn clean compile +
-mvn install +
+*_mvn clean compile_* +
+*_mvn install_* +
 
 *The program can be executed by one of the below options* +
 
-* Place the input file in base folder (/creditcard/input.txt) and type below to execute
-  *mvn exec:java -Dexec.mainClass="com.braintree.creditcard.service.CardProviderService" -Dexec.args="input.txt"*
-* Place the input file in different folder (say "C:/input.txt") and type below to execute
-*mvn exec:java -Dexec.mainClass="com.braintree.creditcard.service.CardProviderService" -Dexec.args="C://input.txt"*
-* To accept line input in STDIN, leave it blank in the command line arguments.
-*mvn exec:java -Dexec.mainClass="com.braintree.creditcard.service.CardProviderService"*
+* Place the input file in base folder (/creditcard/input.txt) and type below to execute +
+  *_mvn exec:java -Dexec.mainClass="com.braintree.creditcard.service.CardProviderService" -Dexec.args="input.txt"_*
+* Place the input file in different folder (say "C:/input.txt") and type below to execute +
+*_mvn exec:java -Dexec.mainClass="com.braintree.creditcard.service.CardProviderService" -Dexec.args="C://input.txt"_*
+* To accept line input in STDIN, leave it blank in the command line arguments. +
+*_mvn exec:java -Dexec.mainClass="com.braintree.creditcard.service.CardProviderService"_*
 
 === Instructions to import in eclipse
 
