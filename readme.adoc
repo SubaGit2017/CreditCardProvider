@@ -1,6 +1,19 @@
 = Creditcard Processing System
-
+_Prerequisite to run this project is Java and Maven_
 == How to Run
+=== Instructions to run in command prompt:
+
+Go to project folder in command prompt and type the following commands +
+mvn clean compile +
+mvn install +
+*The program can be executed by one of the below options* +
+* Place the input file in base folder (/creditcard/input.txt) and type below to execute
+  *mvn exec:java -Dexec.mainClass="com.braintree.creditcard.service.CardProviderService" -Dexec.args="input.txt"*
+* Place the input file in different folder (say "C:/input.txt") and type below to execute
+*mvn exec:java -Dexec.mainClass="com.braintree.creditcard.service.CardProviderService" -Dexec.args="C://input.txt"*
+* To accept line input in STDIN, leave it blank in the command line arguments.
+*mvn exec:java -Dexec.mainClass="com.braintree.creditcard.service.CardProviderService"*
+
 === Instructions to import in eclipse
 
 * Import as "Existing Maven Pojects" 
@@ -10,7 +23,7 @@ click "Arguments" tab
 *  To run from different folder, please provide the entire path and filename "C:/creditcard/input.txt"  as commandline arguments .
 * To accept line input in STDIN, *leave it blank* in the command line arguments.
 
-*Sample Input from STDIN :* +
+=== Sample Input from STDIN
 
 *Please enter different operations to Add, Charge, Credit in each line. Please type EXIT to process and print summary* +
 Add Tom 4111111111111111 $1000 +
