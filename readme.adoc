@@ -10,6 +10,7 @@ mvn clean compile +
 mvn install +
 
 *The program can be executed by one of the below options* +
+
 * Place the input file in base folder (/creditcard/input.txt) and type below to execute
   *mvn exec:java -Dexec.mainClass="com.braintree.creditcard.service.CardProviderService" -Dexec.args="input.txt"*
 * Place the input file in different folder (say "C:/input.txt") and type below to execute
