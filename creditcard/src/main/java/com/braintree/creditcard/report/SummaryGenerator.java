@@ -15,6 +15,8 @@ public class SummaryGenerator {
 
 	public String generateSummarybyName(Map<String, CreditCard> cards) {
 		StringBuffer strBuffer = new StringBuffer();
+
+		if(cards!=null && cards.size()>0){
 		strBuffer.append("--------------------------------------------------------------\n");
 		strBuffer.append("\t\t $$$$$$$$$ Summary Generator $$$$$$$$\t\t\n");
 		strBuffer.append("--------------------------------------------------------------\n");
@@ -34,7 +36,7 @@ public class SummaryGenerator {
 			
 		}
 		strBuffer.append("--------------------------------------------------------------");
-
+		}
 		return strBuffer.toString();
 	}
 
