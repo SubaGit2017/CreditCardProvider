@@ -1,0 +1,58 @@
+= Creditcard Processing System
+
+== How to Run
+=== Instructions to import in eclipse
+
+* Import as "Existing Maven Pojects" 
+0.To run the project in eclipse , right click on the main class *CardProviderService* choose "Run Configurations"
+click "Arguments" tab
+*  To run from base folder, just provide the filename " input.txt"  as commandline arguments.( Sample file is given in project base folder - */creditcard/input.txt*)
+*  To run from different folder, please provide the entire path and filename "C:/creditcard/input.txt"  as commandline arguments .
+* To accept line input in STDIN, *leave it blank* in the command line arguments.
+
+*Sample Input from STDIN :* +
+
+*Please enter different operations to Add, Charge, Credit in each line. Please type EXIT to process and print summary* +
+Add Tom 4111111111111111 $1000 +
+Add Lisa 5454545454545454 $3000 +
+Add Quincy 1234567890123456 $2000 +
+Charge Tom $500 +
+Charge Tom $800 +
+Charge Lisa $7 +
+Credit Lisa $100 +
+Credit Quincy $200 +
+exit +
+
+*Summary is printed as below for input in any form :*
+[source, java]
+----
+--------------------------------------------------------------
+		 $$$$$$$$$ Summary Generator $$$$$$$$		
+--------------------------------------------------------------
+Name	 | Balance
+--------------------------------------------------------------
+Lisa	 | $-93
+Quincy	 | error
+Tom	     | $500
+--------------------------------------------------------------
+----
+== About the classes
+* *CardProviderService* is the java main class to run the project.This  layer accepts inputs and delegates the call to CardProcessor.
+* *CardProcessor* acts as business layer  that processes the given input and takes care of Validation using CardValidator and Persistence using CardHolder.
+* *CardHolder* acts as DAO persistence layer.
+* *CreditCard* is the value object for mapping the input arguments to values.
+* *SummaryGenerator* is used for generating the final summary report.
+* *StringUtility* is used for util functions to add and remove dollar sign.
+* Java test classes are used to unit test the functionality at each layer.
+
+== Design Decisions
+*Following are considered* +
+
+* Separation of concerns +
+* Design patterns considered - *Facade*, *Delegate*, *DAO*, *Value Object*
+
+== Why Java?
+I have good experience in Java programming language and comfortable writing code in Java.
+Java supports object orientation and also one of the prefered languages to develop robust backend applications.
+
+
